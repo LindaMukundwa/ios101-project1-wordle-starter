@@ -8,32 +8,32 @@
 import UIKit
 
 enum LetterCellStyle {
-  case initial
-  case incorrect
-  case correctLetterOnly
-  case correctLetterAndPosition
+    case initial
+    case incorrect
+    case correctLetterOnly
+    case correctLetterAndPosition
 }
 
 class LetterCell: UICollectionViewCell {
 
-  @IBOutlet weak var letterLabel: UILabel!
+    @IBOutlet weak var letterLabel: UILabel!
 
-  required init?(coder: NSCoder) {
-    super.init(coder: coder)
-    layer.borderWidth = 2.0
-    layer.borderColor = UIColor.gray.cgColor
-  }
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        layer.borderWidth = 2.0
+        layer.borderColor = UIColor.gray.cgColor
+    }
 
-  // MARK: - Public Methods
-  func set(letter: String) {
-    letterLabel.text = letter
-  }
+    // MARK: - Public Methods
+    func set(letter: String) {
+        letterLabel.text = letter
+    }
 
-  func clearLetter() {
-    letterLabel.text = ""
-  }
+    func clearLetter() {
+        letterLabel.text = ""
+    }
 
-  /*
+    /*
    Exercise 9:
    Set the correct background color depending on the style that is passed in:
    1. initial should set the background color to black and the border color to gray
@@ -45,12 +45,31 @@ class LetterCell: UICollectionViewCell {
    Tip 2: `contentView` is a UIView. Look at the documentation to see what property you can change to modify its background color
    Tip 3: Look at what initializers UIColor has in the API documentation
    Tip 4: Look above at the init method to see how to change the borderColor
-   
+
    // Checkpoint: After finishing this exercise, you should now see that the board is accurately colored based on your guess! If it's not working, make sure you have done this exercise correctly.
    */
-  func set(style: LetterCellStyle) {
-    // START YOUR CODE HERE
-    // ...
-    // END YOUR CODE HERE
-  }
+    func set(style: LetterCellStyle) {
+        // START YOUR CODE HERE
+        switch style {
+        case .initial:
+            contentView.backgroundColor = .black
+            layer.borderColor = UIColor.gray.cgColor
+        case .incorrect:
+            contentView.backgroundColor = UIColor(
+                red: 0.23, green: 0.23, blue: 0.24, alpha: 1.0)
+            layer.borderColor =
+                UIColor(red: 0.23, green: 0.23, blue: 0.24, alpha: 1.0).cgColor
+        case .correctLetterOnly:
+            contentView.backgroundColor = UIColor(
+                red: 0.69, green: 0.63, blue: 0.30, alpha: 1.0)
+            layer.borderColor =
+                UIColor(red: 0.69, green: 0.63, blue: 0.30, alpha: 1.0).cgColor
+        case .correctLetterAndPosition:
+            contentView.backgroundColor = UIColor(
+                red: 0.38, green: 0.55, blue: 0.33, alpha: 1.0)
+            layer.borderColor =
+                UIColor(red: 0.38, green: 0.55, blue: 0.33, alpha: 1.0).cgColor
+        }
+        // END YOUR CODE HERE
+    }
 }
