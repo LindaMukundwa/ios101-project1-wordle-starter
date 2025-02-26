@@ -1,22 +1,11 @@
-# Project 1 - *Name of App Here*
+# Project 1 - Wordle 
 
-Submitted by: **Your Name Here**
+Submitted by: **Linda Mukundwa**
 
-**Name of your app** is an app that ... [TODO] 
+**Wordle** is an app that functions like the popular New York Times mini game 
 
-Time spent: **X** hours spent in total
+Time spent: **5** hours spent in total
 
-## Required Features
-
-The following **required** functionality is completed:
-
-- [# Project 1 - *Name of App Here*
-
-Submitted by: **Your Name Here**
-
-**Name of your app** is an app that ... [TODO] 
-
-Time spent: **X** hours spent in total
 
 ## Required Features
 
@@ -47,7 +36,7 @@ I also faced problems understand how each component was related and also connect
 
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright [2025] [Linda Mukundwa / Apache]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
